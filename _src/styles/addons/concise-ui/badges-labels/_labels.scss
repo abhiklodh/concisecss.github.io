@@ -1,0 +1,13 @@
+//
+// Labels
+// =============================================================================
+
+.label {
+  background-color: getColor(blue, light);
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-size: pxToEm(13);
+  line-height: unitSize(3);
+  padding: 0 1.25em;
+}

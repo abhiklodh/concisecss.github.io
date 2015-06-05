@@ -1,0 +1,14 @@
+//
+// pxToEm
+// =============================================================================
+// Converts a Px value into a Em value
+//
+// $px {integer} value in pixels
+// $base {integer} Base font size
+//
+// @return: Value in Ems
+//
+
+@function pxToEm($px, $base: $font-base-size) {
+  @return $px/$base + em;
+}

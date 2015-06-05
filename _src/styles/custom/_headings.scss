@@ -1,0 +1,20 @@
+h1, h2, h3, h4, h5, h6,
+.giga, .mega, .kilo {
+  color: getColor(text, headings);
+}
+
+h1 {
+  font-size: pxToEm(47);
+  font-weight: 300;
+  line-height: unitSize(7);
+
+  small {
+    font-weight: inherit;
+    font-size: pxToEm(20, 47);
+    line-height: unitSize(3);
+    display: inline-block;
+    color: getColor(text, primary);
+  }
+}
+
+h2 { font-size: pxToEm(23); }

@@ -1,0 +1,66 @@
+//
+// Buttons
+// =============================================================================
+
+//
+// Bordered
+// --------
+
+.button--bordered {
+  background: transparent;
+  border: 1px solid getColor(base, primary);
+  color: getColor(base, primary);
+}
+
+@each $color-name, $color in $colors {
+  @each $color-type, $color-value in $color {
+    @if $color-type == "base" {
+      .border--#{$color-name} {
+        border: 1px solid $color-value;
+        color: $color-value;
+
+        &:hover,
+        &:focus {
+          background-color: $color-value;
+          color: #fff;
+        }
+
+        &:active { background-color: lighten($color-value, 10%); }
+      }
+    }
+  }
+}
+
+
+//
+// Prefix/Affix
+// ------------
+
+.button--prefix {
+  padding-left: 0;
+
+  .prefix {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .15), rgba(0, 0, 0, .15));
+    display: inline-block;
+    margin-right: 1.25em;
+    padding: 0 .75em;
+    vertical-align: 0;
+  }
+}
+
+.button--affix {
+  padding-right: 0;
+
+  .affix {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .15), rgba(0, 0, 0, .15));
+    display: inline-block;
+    margin-left: 1.25em;
+    padding: 0 .75em;
+    vertical-align: 0;
+  }
+}
+
+
+//
+// Dropdowns
+// ---------

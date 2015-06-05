@@ -1,0 +1,49 @@
+//
+// Concisecss.com
+// =============================================================================
+
+@import 'buttons/button--flat';
+@import 'buttons/button--secondary';
+@import 'headings';
+
+
+//
+// Header
+// -------------
+
+header {
+  text-align: center;
+}
+
+.logo {
+  line-height: unitSize(6);
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.intro {
+  margin: unitSize(9) 0;
+}
+
+// Download & Get started buttons
+.call-to-action {
+  margin-bottom: unitSize(6);
+
+  a {
+    margin-top: 0;
+    // Make the width of the buttons equal to keep symmetry
+    width: 11em;
+
+    &:first-child {
+      margin-right: 2em;
+    }
+  }
+}
+
+// Label with the latest version and size of Concise Framework
+.version-size {
+  color: getColor(text, secondary);
+  font-size: pxToEm(14);
+}

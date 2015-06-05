@@ -1,0 +1,165 @@
+//
+// Forms
+// =============================================================================
+
+input,
+select,
+textarea {
+  border: 1px solid getColor(base, lines);
+  font-size: pxToEm(14);
+  height: unitSize(6);
+  margin: 0;
+  padding: 0 0.75em;
+  transition: $transition-duration;
+  width: 100%;
+
+  &[disabled] {
+    background-color: getColor(background, light);
+    cursor: not-allowed;
+  }
+
+  &:focus { outline: 1px solid getColor(base, lines); }
+}
+
+input {
+  line-height: normal;
+  min-height: unitSize(3)
+}
+
+label {
+  display: block;
+  line-height: unitSize(6);
+}
+
+fieldset {
+  border: 1px solid getColor(base, lines);
+  padding: 0 1em unitSize(4);
+  margin-bottom: unitSize(6);
+}
+
+legend {
+  font-size: pxToEm(14);
+  font-weight: 700;
+  padding: 0 1em;
+}
+
+input[type=range] {
+  border: none;
+  width: 100%;
+  -webkit-appearance: none;
+
+  &:focus { outline: none; }
+
+  &::-webkit-slider-runnable-track {
+    background-color: darken(getColor(background, light), 10%);
+    border: none;
+    border-radius: 3px;
+    height: 5px;
+  }
+
+  &::-webkit-slider-thumb {
+    border: none;
+    border-radius: 50%;
+    background: getColor(base, primary);
+    height: 16px;
+    margin-top: -5px;
+    width: 16px;
+    -webkit-appearance: none;
+  }
+
+  &::-moz-range-track {
+    background-color: darken(getColor(background, light), 10%);
+    border: none;
+    border-radius: 3px;
+    height: 5px;
+  }
+
+  &::-moz-range-thumb {
+    border: none;
+    border-radius: 50%;
+    background: getColor(base, primary);
+    height: 16px;
+    margin-top: -5px;
+    width: 16px;
+  }
+
+  &::-ms-track {
+    background-color: darken(getColor(background, light), 10%);
+    border: none;
+    border-radius: 3px;
+    color: transparent;
+    height: 5px;
+  }
+
+  &::-ms-thumb {
+    border: none;
+    border-radius: 50%;
+    background: getColor(base, primary);
+    height: 16px;
+    margin-top: -5px;
+    width: 16px;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  line-height: normal;
+  padding: 0;
+}
+
+// Checkbox & radio elements are inline with their label
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  margin: 0 0 0 0.5em;
+  line-height: unitSize(3);
+}
+
+input[type="file"] {
+  border: none;
+  line-height: 100%;
+  padding: 0;
+}
+
+textarea {
+  height: auto;
+  resize: vertical;
+}
+
+// Keep the original size for this small inputs
+input[type="checkbox"],
+input[type="file"],
+input[type="image"],
+input[type="radio"] {
+  height: auto;
+  width: auto;
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus,
+input[type="range"]:focus { outline: none; }
+
+// Style select like a standard input - Internet Explorer 11+
+select {
+  background-color: transparent;
+  border-radius: 5px;
+
+  &[disabled] { color: getColor(text, secondary); }
+
+  &[multiple] { height: auto; }
+
+  &::-ms-expand { display: none; }
+
+  &::-ms-value { color: currentColor; }
+}
+
+// Delete margin-top on Option elements
+option { margin-top: 0; }
+
+// Space is provided by the P element
+p {
+  input,
+  select,
+  textarea,
+  label { margin-top: 0; }
+}

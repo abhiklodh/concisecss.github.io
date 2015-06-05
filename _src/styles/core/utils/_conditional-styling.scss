@@ -1,0 +1,152 @@
+//
+// Conditional Styling
+// =============================================================================
+
+//
+// Mixins
+// ------
+
+@mixin show-conditional {
+  display: block;
+  visibility: visible;
+}
+
+@mixin hide-conditional {
+  display: none;
+  visibility: hidden;
+}
+
+
+//
+// Extra-Small Devices
+// -------------------
+
+.show--extraSmall,
+.hide--small,
+.hide--medium,
+.hide--large,
+.hide--extraLarge,
+.hide--print,
+.hide--hd {
+  @include show-conditional;
+}
+
+.hide--extraSmall,
+.show--small,
+.show--medium,
+.show--large,
+.show--extraLarge,
+.show--print,
+.show--hd {
+  @include hide-conditional;
+}
+
+
+//
+// Small Devices
+// -------------
+
+@media #{$bp-small} {
+  .show--small,
+  .hide--extraSmall,
+  .hide--medium,
+  .hide--large,
+  .hide--extraLarge {
+    @include show-conditional;
+  }
+
+  .hide--small,
+  .show--extraSmall,
+  .show--medium,
+  .show--large,
+  .show--extraLarge {
+    @include hide-conditional;
+  }
+}
+
+
+//
+// Medium Devices
+// --------------
+
+@media #{$bp-medium} {
+  .show--medium,
+  .hide--small,
+  .hide--extraSmall,
+  .hide--large,
+  .hide--extraLarge {
+    @include show-conditional;
+  }
+
+  .hide--medium,
+  .show--small,
+  .show--extraSmall,
+  .show--large,
+  .show--extraLarge {
+    @include hide-conditional;
+  }
+}
+
+
+//
+// Large Devices
+// -------------
+
+@media #{$bp-large} {
+  .show--large,
+  .hide--extraSmall,
+  .hide--small,
+  .hide--medium,
+  .hide--extraLarge {
+    @include show-conditional;
+  }
+
+  .hide--large,
+  .show--extraSmall,
+  .show--small,
+  .show--medium,
+  .show--extraLarge {
+    @include hide-conditional;
+  }
+}
+
+
+//
+// Extra-Large Devices
+// -------------------
+
+@media #{$bp-extra-large} {
+  .show--extraLarge,
+  .hide--extraSmall,
+  .hide--small,
+  .hide--medium,
+  .hide--large {
+    @include show-conditional;
+  }
+
+  .hide--extraLarge,
+  .show--extraSmall,
+  .show--small,
+  .show--medium,
+  .show--large {
+    @include hide-conditional;
+  }
+}
+
+
+//
+// HiDPI and Retina
+// ----------------
+
+@media only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3 / 2),
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+  .show--hd {
+    @include show-conditional;
+  }
+
+  .hide--hd {
+    @include hide-conditional;
+  }
+}

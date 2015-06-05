@@ -1,0 +1,61 @@
+//
+// Tables
+// =============================================================================
+
+//
+// Full-width
+// ----------
+
+.table--full { width: 100%; }
+
+
+//
+// Bordered
+// --------
+
+// Bordered all
+.table--bordered {
+  border: 1px solid getColor(base, lines);
+
+  thead,
+  td { border-bottom: 1px solid getColor(base, lines); }
+}
+
+// Bordered outer
+.table--borderedOuter { border: 1px solid getColor(base, lines); }
+
+// Bordered inner
+.table--borderedInner {
+  thead,
+  td { border-bottom: 1px solid getColor(base, lines); }
+}
+
+
+//
+// Filled
+// ------
+
+// Filled even
+.table--filledEven {
+  tbody tr:nth-child(even) { background-color: getColor(background, light); }
+}
+
+// Filled odd
+.table--filledOdd {
+  tbody tr:nth-child(odd) { background-color: getColor(background, light); }
+}
+
+
+//
+// Hover
+// -----
+
+// Row hover
+.table--hoverRow {
+  tbody tr:hover { background-color: getColor(background, light); }
+}
+
+// Cell hover
+.table--hoverCell {
+  tbody td:hover { background-color: getColor(background, light); }
+}

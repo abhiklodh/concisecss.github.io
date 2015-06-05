@@ -1,2 +1,15 @@
-h1 Welcome to Harp.
-h3 This is yours to own. Enjoy.
+header(container)
+  nav.clearfix
+    a(href='//concisecss.com').logo.float--left: img(src='images/logo.svg' alt='Concise' title='Concise' height='25px')
+    a(href='/documentation').button.button--flat.float--right Documentation
+
+  img(src='images/logo2.svg' alt='Concise Logo' height='75px')
+
+  h1.intro A better front-end framework
+    small Give up the bloat. Stop tripping over your classes. Be Concise.
+
+  div.call-to-action
+    a(href='#{download}' title='Download').button Download
+    a(href='documentation/1.get-started.html' title='Documentation').button.button--secondary Get Started
+
+  p.version-size v#{version} - #{size}

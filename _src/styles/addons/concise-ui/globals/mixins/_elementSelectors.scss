@@ -1,0 +1,15 @@
+//
+// elementSelectors
+// =============================================================================
+// Given a SASS list of selectors, outputs them
+//
+// $element-selectors {list} List of selectors that should be output for elements.
+//
+
+$selector: ();
+
+@mixin elementSelectors($element-selectors) {
+  @each $item in $element-selectors {
+    $selector: $selector, unquote('#{$item}');
+  }
+}

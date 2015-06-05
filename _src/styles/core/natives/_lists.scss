@@ -1,0 +1,41 @@
+//
+// Lists
+// =============================================================================
+
+li {
+  line-height: unitSize(3);
+  padding-left: 0.5em;
+
+  ul,
+  ol {
+    margin-top: unitSize(1);
+  }
+}
+
+ul,
+ol { padding-left: 1em; }
+
+ul {
+  ul { list-style-type: square; }
+
+  ol { list-style-type: lower-roman; }
+}
+
+ol {
+ ol { list-style-type: lower-roman; }
+
+ ul { list-style-type: square; }
+}
+
+li + li { margin-top: unitSize(1); }
+
+// Specify nav list style
+nav ol,
+nav ul { list-style: none; }
+
+//
+// Definition Lists
+// ----------------
+dt { font-weight: 700; }
+
+dd { line-height: unitSize(1); }

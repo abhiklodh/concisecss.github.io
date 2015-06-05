@@ -1,0 +1,43 @@
+//
+// Side Off-Canvas
+// =============================================================================
+
+.offCanvas {
+  background-color: getColor(background, dark);
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  transition: width $transition-duration ease;
+  width: 0;
+}
+
+.offCanvas-content {
+  float: right;
+  transition: width $transition-duration ease;
+  width: 100%;
+}
+
+.offCanvas-close { display: none; }
+
+#offCanvas:target { width: 20%; }
+
+#offCanvas:target + .offCanvas-content {
+  width: 80%;
+
+  .offCanvas-open { display: none; }
+
+  .offCanvas-close { display: block; }
+}
+
+
+//
+// Modifiers
+// ---------
+
+.offCanvas--right {
+  left: auto;
+  right: 0;
+}

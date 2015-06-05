@@ -1,0 +1,104 @@
+//
+// Cards
+// =============================================================================
+
+.card {
+  background-color: #fff;
+  border: 1px solid lighten(getColor(base, lines), 5%);
+  margin: unitSize(2) 0;
+  overflow: hidden;
+  position: relative;
+
+  .card-content,
+  .card-footer { padding: 0 1.5em; }
+
+  .card-title {
+    display: block;
+    font-size: pxToEm(26);
+    padding: unitSize(4) 0 unitSize(2);
+  }
+
+  .card-content {
+    p:first-of-type { margin-top: 0; }
+
+    p:last-of-type { margin-bottom: 0; }
+  }
+
+  .card-footer {
+    border-top: 1px solid lighten(getColor(base, lines), 5%);
+    font-size: pxToEm(14);
+    padding: unitSize(2) 1.5em;
+  }
+
+
+  //
+  // Images
+  // ------
+
+  .card-image {
+    position: relative;
+
+    img {
+      bottom: 0;
+      left: 0;
+      position: relative;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+
+    .card-title {
+      bottom: 0;
+      color: #fff;
+      left: 0;
+      padding: 0 1em unitSize(2);
+      position: absolute;
+    }
+  }
+}
+
+
+//
+// Sizes
+// -----
+
+.card--small,
+.card--medium,
+.card--large {
+  .card-image,
+  .card-content { overflow: hidden; }
+
+  .card-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+// Small
+.card--small {
+  height: 300px;
+
+  .card-image { height: 150px; }
+
+  .card-content { height: 150px; }
+}
+
+// Medium
+.card--medium {
+  height: 400px;
+
+  .card-image { height: 250px; }
+
+  .card-content { height: 150px; }
+}
+
+// Large
+.card--large {
+  height: 500px;
+
+  .card-image { height: 330px; }
+
+  .card-content { height: 170px; }
+}

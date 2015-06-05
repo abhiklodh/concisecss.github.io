@@ -1,0 +1,31 @@
+//
+// Colors
+// =============================================================================
+// Generates classes to change type and background colors from the colors
+// set in `_globals.scss`.
+
+//
+// Styles
+// ------
+
+@each $color-name, $color in $colors {
+  @each $color-type, $color-value in $color {
+    @if $color-type == "base" {
+      .text--#{$color-name} {
+        color: $color-value !important;
+      }
+
+      .bg--#{$color-name} {
+        background-color: $color-value !important;
+      }
+    } @else {
+      .text--#{$color-name}-#{$color-type} {
+        color: $color-value !important;
+      }
+
+      .bg--#{$color-name}-#{$color-type} {
+        background-color: $color-value !important;
+      }
+    }
+  }
+}

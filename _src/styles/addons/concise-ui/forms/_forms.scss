@@ -1,0 +1,57 @@
+//
+// Forms
+// =============================================================================
+
+//
+// Descendants
+// -----------
+
+// Help text
+.input--help {
+  color: getColor(text, secondary);
+  font-size: pxToEm(12);
+  font-weight: bold;
+  margin-top: 0;
+}
+
+
+//
+// Inline Form
+// -----------
+
+.form--inline {
+  input {
+    display: inline;
+    width: auto;
+  }
+
+  label { display: inline; }
+}
+
+
+//
+// Horizontal Form
+// ---------------
+
+.form--horizontal {
+  label { width: auto; }
+
+  @media #{$bp-extra-small} {
+    input,
+    select,
+    textarea { width: auto; }
+
+    label {
+      display: inline-block;
+      margin-right: 1em;
+      width: auto;
+    }
+
+    textarea { width: auto; }
+  }
+}
+
+
+//
+// Icons
+// -----

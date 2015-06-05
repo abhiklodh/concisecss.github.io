@@ -1,0 +1,27 @@
+//
+// Modifiers
+// =============================================================================
+
+// Flat
+.button--flat {
+  background-color: transparent;
+  color: getColor(text, primary);
+
+  &:hover {
+    background-color: transparent;
+    color: darken(getColor(text, primary), 15%);
+  }
+
+  &:active,
+  &:focus {
+    background-color: lighten(getColor(base, primary), 10%);
+    color: #fff;
+  }
+}
+
+// Collapsible
+.button--collapse {
+  width: 100%;
+
+  @media #{$bp-extra-small} { width: auto; }
+}

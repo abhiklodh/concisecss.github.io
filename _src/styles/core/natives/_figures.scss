@@ -1,0 +1,11 @@
+//
+// Figures
+// =============================================================================
+
+figure { margin: unitSize(1) 1em; }
+
+figcaption {
+  color: getColor(text, secondary);
+  font-style: italic;
+  text-align: center;
+}

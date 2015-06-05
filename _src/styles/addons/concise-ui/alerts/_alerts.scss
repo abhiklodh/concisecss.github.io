@@ -1,0 +1,60 @@
+//
+// Alerts
+// =============================================================================
+
+.alert {
+  border: 1px solid getColor(base, lines);
+  color: inherit;
+  font-size: pxToEm(14);
+  margin: unitSize(2) 0;
+  padding: unitSize(1.5) 1em;
+  position: relative;
+
+  .alert-close {
+    color: inherit;
+    float: right;
+    opacity: 0.5;
+    transition: opacity .15s;
+
+    &:hover { opacity: 1; }
+
+    &:hover,
+    &:focus { text-decoration: none; }
+  }
+
+  p { margin: 0; }
+
+  a { color: darken(getColor(text, primary), 15%); }
+}
+
+
+//
+// States
+// ------
+
+// Success
+.alert--success {
+  background-color: rgba(getColor(state, success), .15);
+  border: 1px solid rgba(getColor(state, success), .2);
+  color: darken(getColor(state, success), 10%);
+
+  a { color: darken(getColor(state, success), 15%); }
+}
+
+// Warning
+.alert--warning {
+  background-color: rgba(getColor(state, warning), .15);
+  border: 1px solid rgba(getColor(state, warning), .2);
+  color: darken(getColor(state, warning), 10%);
+
+  a { color: darken(getColor(state, warning), 15%); }
+}
+
+// Error
+.alert--error {
+  background-color: rgba(getColor(state, error), .15);
+  border: 1px solid rgba(getColor(state, error), .2);
+  color: darken(getColor(state, error), 10%);
+
+  a { color: darken(getColor(state, error), 15%); }
+}

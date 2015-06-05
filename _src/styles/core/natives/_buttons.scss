@@ -1,0 +1,33 @@
+//
+// Buttons
+// =============================================================================
+
+button,
+.button {
+  background-color: getColor(base, primary);
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  line-height: unitSize(6);
+  padding: 0 2.5em;
+  text-align: center;
+  text-decoration: none;
+  transition: $transition-duration;
+  overflow: visible;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: lighten(getColor(base, primary), 15%);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &:active { background-color: lighten(getColor(base, primary), 10%); }
+
+  &[disabled] {
+    background-color: darken(getColor(background, light), 10%);
+    color: #fff;
+    cursor: not-allowed;
+  }
+}

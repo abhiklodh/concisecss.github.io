@@ -1,0 +1,38 @@
+//
+// Alignment
+// =============================================================================
+
+//
+// Text Alignment
+// --------------
+
+.align--left { text-align: left; }
+
+.align--center { text-align: center; }
+
+.align--right { text-align: right; }
+
+
+//
+// Floats
+// ------
+
+.float--right { float: right; }
+
+.float--left { float: left; }
+
+.clearfix { @include clearfix(); }
+
+
+//
+// Centering
+// ---------
+
+// Center horizontally and vertically
+.center--all {
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

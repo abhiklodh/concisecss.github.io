@@ -1,0 +1,196 @@
+//
+// Animations
+// =============================================================================
+// Extracted from Animate.css - http://daneden.me/animate
+// Copyright (c) 2015 Daniel Eden
+//
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  &.infinite { animation-iteration-count: infinite; }
+}
+
+
+//
+// Pulse
+// -----
+
+@keyframes pulse {
+  0% { transform: scale3d(1, 1, 1); }
+
+  50% { transform: scale3d(1.05, 1.05, 1.05); }
+
+  100% { transform: scale3d(1, 1, 1); }
+}
+
+.pulse { animation-name: pulse; }
+
+
+//
+// FadeIn
+// ------
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+
+  100% { opacity: 1; }
+}
+
+.fadeIn { animation-name: fadeIn; }
+
+
+//
+// FadeInDown
+// ----------
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown { animation-name: fadeInDown; }
+
+
+//
+// FadeInLeft
+// ----------
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInLeft { animation-name: fadeInLeft; }
+
+
+//
+// FadeInRight
+// -----------
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInRight { animation-name: fadeInRight; }
+
+
+//
+// FadeInUp
+// --------
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp { animation-name: fadeInUp; }
+
+
+//
+// FadeOut
+// -------
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+
+  100% { opacity: 0; }
+}
+
+.fadeOut { animation-name: fadeOut; }
+
+
+//
+// FadeOutDown
+// -----------
+
+@keyframes fadeOutDown {
+  0% { opacity: 1; }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.fadeOutDown { animation-name: fadeOutDown; }
+
+
+//
+// FadeOutLeft
+// -----------
+
+@keyframes fadeOutLeft {
+  0% { opacity: 1; }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.fadeOutLeft { animation-name: fadeOutLeft; }
+
+
+//
+// FadeOutRight
+// ------------
+
+@keyframes fadeOutRight {
+  0% { opacity: 1; }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.fadeOutRight { animation-name: fadeOutRight; }
+
+
+//
+// FadeOutUp
+// ---------
+
+@keyframes fadeOutUp {
+  0% { opacity: 1; }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.fadeOutUp { animation-name: fadeOutUp; }

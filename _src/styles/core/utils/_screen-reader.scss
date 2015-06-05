@@ -1,0 +1,16 @@
+//
+// Screen-Reader Content
+// =============================================================================
+
+@media screen {
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    border: 0 none;
+    clip: rect(0, 0, 0, 0) !important;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+  }
+}

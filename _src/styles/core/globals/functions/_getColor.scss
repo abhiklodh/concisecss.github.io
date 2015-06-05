@@ -1,0 +1,14 @@
+//
+// getColor
+// =============================================================================
+// Easily retrieve colors for use.
+//
+// $color {string} Name of the color
+// $value {string} The color value to grab
+//
+// @return: Value of the color
+//
+
+@function getColor($color, $value: 'base') {
+  @return map-get(map-get($colors, $color), $value);
+}

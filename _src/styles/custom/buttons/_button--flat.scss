@@ -1,0 +1,19 @@
+.button--flat {
+  border: 1px solid getColor(base, lines);
+  margin-top: 0;
+  padding: 0 2em;
+  line-height: unitSize(6, -2);
+
+  &:hover,
+  &:focus{
+    color: getColor(base, primary);
+    border-color: getColor(base, primary);
+    background-color: transparent;
+    outline: none;
+  }
+
+  &:active {
+    background-color: getColor(base, primary);
+    color: #fff;
+  }
+}

@@ -1,0 +1,21 @@
+//
+// Heading sizes
+// =============================================================================
+
+.giga { font-size: pxToEm(80); }
+
+.mega { font-size: pxToEm(64); }
+
+.kilo { font-size: pxToEm(52); }
+
+.giga, .mega, .kilo {
+  font-family: $font-family-headings;
+  line-height: 1.618em;
+
+  small {
+    color: getColor(text, secondary);
+    font-size: 70%;
+    font-weight: 400;
+    vertical-align: 0;
+  }
+}

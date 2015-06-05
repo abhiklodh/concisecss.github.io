@@ -1,0 +1,92 @@
+//
+// Type Styles
+// =============================================================================
+
+//
+// Defaults
+// --------
+
+i,
+em { font-style: italic; }
+
+b,
+strong { font-weight: bold; }
+
+
+//
+// Links
+// -----
+
+a {
+  background-color: transparent;
+  color: getColor(base, primary);
+  cursor: pointer;
+  text-decoration: none;
+  transition: $transition-duration;
+
+  &:hover,
+  &:focus { color: darken(getColor(base, primary), 15%); }
+
+  &:active,
+  &:hover { outline: 0; }
+}
+
+h1, h2, h3 {
+  a {
+    color: getColor(text, primary);
+
+    &:hover,
+    &:focus {
+      color: getColor(base, primary);
+      text-decoration: none;
+    }
+  }
+}
+
+
+//
+// Abbreviations and Acronyms
+// --------------------------
+
+abbr[title] {
+  border-bottom: 1px dotted getColor(base, lines);
+  cursor: help;
+}
+
+acronym {
+  border-bottom: 1px dashed getColor(base, lines);
+  cursor: help;
+}
+
+
+//
+// Pre, Code, and User Input
+// -------------------------
+
+code,
+pre,
+kbd,
+samp {
+  font-family: $font-family-mono;
+  font-size: pxToEm(14);
+}
+
+code,
+pre { background-color: getColor(background, light); }
+
+code { vertical-align: 5%; }
+
+kbd {
+  background-color: getColor(background, dark);
+  border-radius: 4px;
+  color: #fff;
+  padding: 1px 4px;
+  vertical-align: 5%;
+}
+
+
+//
+// Addresses
+// ---------
+
+address { font-style: normal; }

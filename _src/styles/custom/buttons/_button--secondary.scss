@@ -1,0 +1,10 @@
+.button--secondary {
+  background-color: getColor(base, secondary);
+
+  &:hover,
+  &:focus {
+    background-color: lighten(getColor(base, secondary), 15%);
+  }
+
+  &:active { background-color: lighten(getColor(base, secondary), 10%); }
+}

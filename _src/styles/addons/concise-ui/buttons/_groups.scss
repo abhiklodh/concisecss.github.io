@@ -1,0 +1,42 @@
+//
+// Groups
+// =============================================================================
+
+.group {
+  display: inline-block;
+  padding: 0;
+  @include clearfix();
+
+  li {
+    list-style: none;
+    float: left;
+    padding: 0;
+
+    &:not(:first-child) { margin: 0 0 0 -1px; }
+  }
+
+  a {
+    border: 1px solid getColor(base, lines);
+    line-height: unitSize(4);
+    padding: 0 1em;
+    transition: $transition-duration;
+    display: inline-block;
+    font-size: pxToEm(14);
+
+    &:hover { background-color: getColor(background, light); }
+  }
+
+  // Menus with icons should have two 'span', one for the text and another for the icon
+  [#{$prefix}icon],
+  [class^="icon-"] {
+    line-height: unitSize(4);
+
+    // When the icon is in the beginning
+    &:first-child { margin: 0 0.3em 0 -0.3em; }
+
+    // When the icon is in the end
+    &:last-child { margin: 0 -0.3em 0 0.3em; }
+  }
+
+  span { margin-top: 0; }
+}

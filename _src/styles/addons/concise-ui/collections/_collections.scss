@@ -1,0 +1,22 @@
+//
+// Collections
+// =============================================================================
+
+.collection {
+  border: 1px solid getColor(base, lines);
+  list-style-type: none;
+  margin: unitSize(2) 0;
+  padding: 0;
+
+  .collection-item,
+  .collection-header {
+    border-bottom: 1px solid getColor(base, lines);
+    display: block;
+    margin: 0;
+    padding: unitSize(2) 1.5em;
+
+    &:last-of-type { border-bottom: none; }
+  }
+
+  a.collection-item:hover { background-color: getColor(background, light); }
+}

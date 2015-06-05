@@ -1,0 +1,28 @@
+//
+// Headings
+// =============================================================================
+
+h1, h2, h3, h4, h5, h6,
+.giga, .mega, .kilo {
+  font-family: $font-family-headings;
+  line-height: 1.618em;
+
+  small {
+    color: getColor(text, secondary);
+    font-size: 70%;
+    font-weight: 400;
+    vertical-align: 0;
+  }
+}
+
+h1 { font-size: pxToEm(42); }
+
+h2 { font-size: pxToEm(26); }
+
+h3 { font-size: pxToEm(20); }
+
+h4 { font-size: pxToEm(16); }
+
+h5 { font-size: pxToEm(13); }
+
+h6 { font-size: pxToEm(12); }

@@ -1,0 +1,16 @@
+//
+// unitSize
+// =============================================================================
+// Use this function to set sizes with proportions.
+//
+// $multiplier {string} times the base unit (8px by default)
+// $offset {integer} A value in pixels which will be added to the result,
+//   can be positive for addition or negative for subtraction
+// $base {string} Base font size
+//
+// @return: Value in Rems, equal to the number of times the base unit
+//          plus the offset
+//
+@function unitSize($multiplier, $offset: 0, $base: $font-base-size) {
+  @return ($base-unit * $multiplier + $offset) / $base + rem;
+}
