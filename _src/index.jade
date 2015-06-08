@@ -1,15 +1,65 @@
-header(container)
-  nav.clearfix
-    a(href='//concisecss.com').logo.float--left: img(src='images/logo.svg' alt='Concise' title='Concise' height='25px')
-    a(href='/documentation').button.button--flat.float--right Documentation
+div.align--center
+  header(container).main-header
+    nav.clearfix
+      a(href='//concisecss.com').logo.float--left: img(src='images/logo.svg' alt='Concise' title='Concise' height='25px')
+      a(href='/documentation').button.button--flat.float--right Documentation
 
-  img(src='images/logo2.svg' alt='Concise Logo' height='75px')
+    img(src='images/logo2.svg' alt='Concise Logo' height='75px')
 
-  h1.intro A better front-end framework
-    small Give up the bloat. Stop tripping over your classes. Be Concise.
+    h1.heading A better front-end framework
+      small Give up the bloat. Stop tripping over your classes. Be Concise
 
-  div.call-to-action
-    a(href='#{download}' title='Download').button Download
-    a(href='documentation/1.get-started.html' title='Documentation').button.button--secondary Get Started
+    div.call-to-action
+      a(href='#{download}' title='Download').button Download
+      a(href='documentation/1.get-started.html' title='Documentation').button.button--secondary Get Started
 
-  p.version-size v#{version} - #{size}
+    p.version-size v#{version} - #{size}
+
+  section.home-section
+    div(container)
+      h1.heading Lean, mean and clean
+        small Give up the bloat. Accomplish more with less. Welcome to Concise
+
+      div(row)
+        section(column='4')
+          img(src='images/mobile.png').fluid-media
+          h3 Perfect for all devices
+          p Concise is built from the ground up for mobile devices. This means it will look great on all devices.
+
+        section(column='4')
+          img(src='images/sass.png').fluid-media
+          h3 Preprocessor-built
+          p Concise includes official support for Vanilla CSS, as well as SASS.
+
+        section(column='4')
+          img(src='images/components.png').fluid-media
+          h3 Highly expandable
+          p Concise includes great base styling, as well as many add-ons that make it highly expandable.
+
+  section.home-section
+    div(container)
+      h1.heading Who uses it?
+        small There are some truly beautiful websites that have been created with Concise
+
+      div(row)
+        section(column='3')
+          img(src='images/featured/keenanpayne.png').fluid-media
+
+        section(column='3')
+          img(src='images/featured/north-river-outfitting.png').fluid-media
+
+        section(column='3')
+          img(src='images/featured/clasipar.png').fluid-media
+
+        section(column='3')
+          img(src='images/featured/halfpast.png').fluid-media
+
+  section.cta-section
+    div(container)
+      h1.heading Heard enough already?
+        small Just give Concise a try, we think you'll like it.
+
+      a(href='#{download}').button.button--flat Download
+
+  include includes/_footer
+
