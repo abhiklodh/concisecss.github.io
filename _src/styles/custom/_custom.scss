@@ -23,6 +23,10 @@
   }
 }
 
+.logo-docs {
+  margin-top: unitSize(-7);
+}
+
 .heading {
   margin: unitSize(9) 0;
 }
@@ -67,6 +71,7 @@
   padding-bottom: unitSize(12);
   background-color: getColor(base, primary);
   color: #fff;
+  margin-top: 0;
 
   h1 {
     color: #fff;

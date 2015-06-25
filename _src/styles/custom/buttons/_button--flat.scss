@@ -16,4 +16,8 @@
     background-color: getColor(base, primary);
     color: #fff;
   }
+
+  &.active {
+    color: getColor(base, primary);
+  }
 }

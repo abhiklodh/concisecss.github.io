@@ -1,1 +1,3 @@
-h1 Documentation homepage
+for article, slug in public.documentation._data
+  a(href="/documentation/#{ slug }")= article.title
+  br

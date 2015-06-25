@@ -7,17 +7,34 @@ html(lang='en')
     meta(name='description' content='Concise is a lightweight front-end framework that provides a number of great features without the bloat.')
     meta(name='viewport' content='width=device-width, initial-scale=1')
 
-    link(rel='stylesheet' href='styles/concise.css')
+    link(rel='stylesheet' href='../styles/concise.css')
 
   body
-    h1 Documentation
-    != yield
+    div.align--center
+      header(container).main-header
+        nav.clearfix
+          a(href='/').logo.float--left: img(src='../images/logo.svg' alt='Concise' title='Concise' height='25px')
+          a(href='/documentation').button.active.button--flat.float--right Documentation
+
+        img(src='../images/logo2.svg' alt='Concise Logo' height='75px').logo-docs
+
+      section.home-section
+        != yield
+
+      section.cta-section
+        div(container)
+          h1.heading Heard enough already?
+            small Just give Concise a try, we think you'll like it.
+
+          a(href='#{download}').button.button--flat Download
+
+      include ../includes/_footer
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
     script
-      | window.jQuery || document.write('<script src="scripts/vendor/jquery-2.1.4.min.js"><\/script>')
-    script(src='scripts/plugins.js')
-    script(src='scripts/main.js')
+      | window.jQuery || document.write('<script src="../scripts/vendor/jquery-2.1.4.min.js"><\/script>')
+    script(src='../scripts/plugins.js')
+    script(src='../scripts/main.js')
 
     script.
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
