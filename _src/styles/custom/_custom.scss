@@ -66,6 +66,7 @@
   }
 }
 
+
 // Section for Call to action
 .cta-section {
   padding-bottom: unitSize(12);
@@ -129,5 +130,20 @@
       margin-left: 1em;
       color: #a4a9ac;
     }
+  }
+}
+
+
+//
+// Misc
+// -------------
+
+.demo-site {
+  opacity: .7;
+  transition: $transition-duration;
+
+  &:hover,
+  &focus {
+    opacity: 1;
   }
 }
