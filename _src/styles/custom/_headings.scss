@@ -14,7 +14,12 @@ h1 {
     line-height: unitSize(3);
     display: inline-block;
     color: getColor(text, primary);
+    width: 100%;
   }
 }
 
 h2 { font-size: pxToEm(23); }
+
+h3 {
+  font-weight: 500;
+}

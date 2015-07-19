@@ -11,8 +11,8 @@
 // Header
 // -------------
 
-header {
-  text-align: center;
+.main-header {
+  padding-bottom: unitSize(9)
 }
 
 .logo {
@@ -23,7 +23,11 @@ header {
   }
 }
 
-.intro {
+.logo-docs {
+  margin-top: unitSize(-7);
+}
+
+.heading {
   margin: unitSize(9) 0;
 }
 
@@ -46,4 +50,100 @@ header {
 .version-size {
   color: getColor(text, secondary);
   font-size: pxToEm(14);
+}
+
+
+//
+// Sections
+// -------------
+
+.home-section {
+  padding-bottom: unitSize(12);
+  &:nth-child(even) {
+    background-color: getColor(background, light);
+    border-top: 1px solid getColor(base, lines);
+    border-bottom: 1px solid getColor(base, lines);
+  }
+}
+
+
+// Section for Call to action
+.cta-section {
+  padding-bottom: unitSize(12);
+  background-color: getColor(base, primary);
+  color: #fff;
+  margin-top: 0;
+
+  h1 {
+    color: #fff;
+  }
+
+  small {
+    color: inherit;
+  }
+
+  .button {
+    border-color: #fff;
+    color: #fff;
+    padding: 0 3em;
+
+    &:hover,
+    &:focus {
+      background-color: lighten(getColor(base, primary), 5%)
+    }
+  }
+}
+
+
+//
+// Footer
+// -------------
+
+.main-footer {
+  background-color: getColor(background, dark);
+  margin-top: 0;
+  padding: unitSize(3) 0;
+
+  a {
+    color: #d3d8dc;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+
+  small {
+    font-size: pxToEm(14);
+    color: #878b8f;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 1em 0 0;
+    font-size: pxToEm(14);
+    padding: 0;
+    line-height: unitSize(6);
+
+    &:not(:last-child)::after {
+      content: '|';
+      margin-left: 1em;
+      color: #a4a9ac;
+    }
+  }
+}
+
+
+//
+// Misc
+// -------------
+
+.demo-site {
+  opacity: .7;
+  transition: $transition-duration;
+
+  &:hover,
+  &focus {
+    opacity: 1;
+  }
 }
