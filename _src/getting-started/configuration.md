@@ -22,10 +22,4 @@ In your custom CSS files, or in `<style>` tags, you need to set a fixed width fo
 .container { width: 960px !important; }
 ```
 
-This overrides the Concise responsive container that is enabled by default. Next, we need to add a single class to the `<body>` tag, that will aid in disabling other responsive aspects of the site:
-
-```html
-<body class="non-responsive">
-```
-
-Just like that, you have a non-responsive website, and there’s an added bonus. Concise is built so that you can declare any width for your `.container` class, and the grid columns will adjust automatically. Every single column will have a correct width relative to that of the container.
+This overrides the Concise responsive container that is enabled by default.
