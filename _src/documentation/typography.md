@@ -98,3 +98,88 @@ The `<strong>` tag is used for emphasizing text with a heavier font-weight.
 </div>
 
 <p class="note">The `<b>` tag also can be used for emphasizing text in a bold manner, although it is not recommended as `<strong>` should be used. should be used. Per the HTML5 specification, the `<b>` tag should be used as a last resort for formatting text as most HTML5 tags cover its potential uses.</p>
+
+## Abbreviations
+
+Using the `<abbr>` tag in HTML, you can denote an abbreviation or acronym. Using proper HTML markup for your abbreviations helps with the understanding of acronyms, spell checkers, text translators, and search engine indexing.
+
+Items that are marked up with the `<abbr>` tag are styled with a dashed underline, a cursor with a question mark and whatever content is used in the `title` attribute is shown in a browser tooltip.
+
+<div class="preview">
+  <p class="preview-heading">Preview</p>
+
+  <p class="preview-body">This website is built with HTML and CSS.</p>
+</div>
+
+## Type Positioning
+
+Positioning text is easy with a few global classes that can be used on almost any element containing text.
+
+<div class="preview">
+  <p class="preview-heading">Preview</p>
+
+  <div class="preview-body">
+    <p class="text--left">Left-aligned text</p>
+
+    <p class="text--center">Center-aligned text</p>
+
+    <p class="text--right">Right-aligned text</p>
+
+    <p class="text--justify">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  </div>
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+    ```html
+      <p class="text-left">...</p>
+      <p class="text-center">...</p>
+      <p class="text-right">...</p>
+      <p class="text-justify">...</p>
+    ```
+  </div>
+</div>
+
+## Type Colors
+
+Nobody constantly wants black text on a white background, do they? Of course not. That's why Concise comes with various classes that can be used to change the color of text.
+
+<p class="note note--preprocessor">You can change the `$colors` map in the `/globals/_globals.scss` file to adjust any of the base colors or add your own colors. Any color added will automatically have an appropriate `.color--*` class created for it.</p>
+
+<p class="note">I have given the white text a black background just for the purpose of demonstration.</p>
+
+<div class="preview">
+  <div class="preview-heading">
+    <strong>Preview</strong>
+  </div>
+
+  <div class="preview-body">
+    <p class="bg--black text-white">Here is some white colored text.</p>
+
+    <p class="text-black">Here is some black colored text.</p>
+
+    <p class="text-gray">Here is some gray colored text.</p>
+
+    <p class="text-green">Here is some green colored text.</p>
+
+    <p class="text-blue">Here is some blue colored text.</p>
+
+    <p class="text-yellow">Here is some yellow colored text.</p>
+
+    <p class="text-red">Here is some red colored text.</p>
+  </div>
+
+  <div class="preview-footer">
+    <strong>Code</strong>
+
+    ```html
+      <p class="text-white">...</p>
+      <p class="text-black">...</p>
+      <p class="text-gray">...</p>
+      <p class="text-green">...</p>
+      <p class="text-blue">...</p>
+      <p class="text-yellow">...</p>
+      <p class="text-red">...</p>
+    ```
+  </div>
+</div>
